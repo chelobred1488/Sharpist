@@ -144,12 +144,12 @@ class Program
     }
 }
 
-class Welcome
-{
-    public static void Print() => Console.WriteLine("Welcome");
-}
-
-class Hello
-{
-    public void Display() => Console.WriteLine("Hello");
-}
+// class Welcome
+// {
+//     public static void Print() => Console.WriteLine("Welcome");
+// }
+//
+// class Hello
+// {
+//     public void Display() => Console.WriteLine("Hello");
+// }
