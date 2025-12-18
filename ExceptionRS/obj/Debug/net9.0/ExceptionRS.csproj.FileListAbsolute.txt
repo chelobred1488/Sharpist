@@ -1,0 +1,14 @@
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\bin\Debug\net9.0\ExceptionRS.exe
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\bin\Debug\net9.0\ExceptionRS.deps.json
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\bin\Debug\net9.0\ExceptionRS.runtimeconfig.json
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\bin\Debug\net9.0\ExceptionRS.dll
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\bin\Debug\net9.0\ExceptionRS.pdb
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.AssemblyInfoInputs.cache
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.AssemblyInfo.cs
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.csproj.CoreCompileInputs.cache
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.dll
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\refint\ExceptionRS.dll
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.pdb
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ExceptionRS.genruntimeconfig.cache
+C:\Users\HOME\RiderProjects\testa\ExceptionRS\obj\Debug\net9.0\ref\ExceptionRS.dll

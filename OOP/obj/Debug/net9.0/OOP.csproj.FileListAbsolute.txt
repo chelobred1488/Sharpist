@@ -1,0 +1,14 @@
+C:\Users\HOME\RiderProjects\testa\OOP\bin\Debug\net9.0\OOP.exe
+C:\Users\HOME\RiderProjects\testa\OOP\bin\Debug\net9.0\OOP.deps.json
+C:\Users\HOME\RiderProjects\testa\OOP\bin\Debug\net9.0\OOP.runtimeconfig.json
+C:\Users\HOME\RiderProjects\testa\OOP\bin\Debug\net9.0\OOP.dll
+C:\Users\HOME\RiderProjects\testa\OOP\bin\Debug\net9.0\OOP.pdb
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.AssemblyInfoInputs.cache
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.AssemblyInfo.cs
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.csproj.CoreCompileInputs.cache
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.dll
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\refint\OOP.dll
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.pdb
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\OOP.genruntimeconfig.cache
+C:\Users\HOME\RiderProjects\testa\OOP\obj\Debug\net9.0\ref\OOP.dll
