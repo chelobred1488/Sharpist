@@ -118,6 +118,182 @@ class Program
         // }        Using delegate as parameter of Method!
         
         
+        // Operation operation = SelectOperation(OperationType.Add);
+        // Console.WriteLine(operation(10, 20));
+        //
+        // operation = SelectOperation(OperationType.Subtract);
+        // Console.WriteLine(operation(10, 20));
+        //
+        // operation = SelectOperation(OperationType.Multiply);
+        // Console.WriteLine(operation(10, 20));
+        //
+        // Operation SelectOperation(OperationType opType)
+        // {
+        //     switch (opType)
+        //     {
+        //         case OperationType.Add: return Add;
+        //         case OperationType.Subtract: return Subtract;
+        //         default: return Multiply;
+        //     }
+        // }
+        //
+        //
+        // void Hello() => Console.WriteLine("Hello, Metanit.com");
+        // void HowAreYou() => Console.WriteLine("How are you?");
+        // void HowOldAreYou() => Console.WriteLine("How old are you?");
+        
+        
+        /* USAING DELEGATES */
+
+        // Account account = new(100);
+        // account.AccountRegister(Print);
+        // account.AccountRegister(ColorPrint);
+        // account.Take(50);
+        // account.UnRegisterAccount(ColorPrint);
+        // account.Take(100);
+        // void Print(string message) => Console.WriteLine(message);
+        //
+        // void ColorPrint(string message)
+        // {
+        //     Console.ForegroundColor = ConsoleColor.Green;
+        //     Console.WriteLine(message);
+        //     Console.ResetColor();
+        // }
+        
+        
+        /* ANNONYMOUS METHODS */
+
+        // MessageHandler handler = delegate(string mes)
+        // {
+        //     Console.WriteLine(mes);
+        // };
+        // handler("Hello World!");
+        
+        // static void ShowMessage(string message, MessageHandler handler)
+        // {
+        //     handler.Invoke(message);
+        // }
+        //
+        // ShowMessage("Hello", delegate(string mes)
+        // {
+        //     Console.WriteLine(mes);
+        // });
+
+        // MessageHandler handler = delegate
+        // {
+        //     Console.WriteLine("Annonymous Method!");
+        // };
+        // handler("hello World!");
+
+        // int z = 7;
+        // Operation operation = delegate(int x, int y)
+        // {
+        //     return x + y + z;
+        // };
+        // int result = operation(1, 2);
+        // Console.WriteLine(result);
+        
+        
+        /* LYAMBDA EXPRESSION*/
+
+        // Message hello = () =>
+        // {
+        //     Console.Write("Hello ");
+        //     Console.WriteLine("World!");
+        // };
+        // hello();
+        // hello();
+        // hello();
+        
+        // var hello = () => Console.WriteLine("Hello World!");
+        // hello();
+        // hello();
+        // hello();
+        
+        // MathOperation sum = (x, y) => Console.WriteLine($"{x} + {y} = {x + y}");
+        // sum(10, 20);
+        // sum(220, 440);
+
+        // var sum = (x, y) => Console.WriteLine($"{x} + {y} = {x + y}");  ERROR!
+        // var sum = (int x, int y) => Console.WriteLine($"{x} + {y} = {x + y}");
+        // sum(1, 2);
+        // sum(30, 40);
+        
+        // PrintHandler print = message => Console.WriteLine(message);  //We may not use '()' if we have only one parameter
+        // print("Hello!");
+        // print("Welcome!");  
+
+        // var welcome = (string message = "Hello") => Console.WriteLine(message);  //We can use default value in our parameters
+        // welcome("Hello World!");
+        // welcome();
+        
+        // var sum = (int x, int y) => x + y;
+        // int sumResult = sum(4, 5);
+        // Console.WriteLine(sumResult);
+        //
+        // Operation multiply = (x, y) => x * y;
+        // int multiplyResult = multiply(4, 5);
+        // Console.WriteLine(multiplyResult);
+
+        // var substact = (int x, int y) =>
+        // {
+        //     if (x > y) return x - y;
+        //     else return y - x;
+        // };
+        // int result1 = substact(10, 6);
+        // Console.WriteLine(result1);
+        //
+        // int result2 = substact(-10, 6);
+        // Console.WriteLine(result2);
+        
+        
+        
+        // Add & Remove actions in Lambda Expressions
+        
+        // var hello = () => Console.WriteLine("METANIT.COM");
+        //
+        // var message = () => Console.Write("Hello ");
+        // message += () => Console.WriteLine("World");
+        // message += hello;
+        // message += Print;
+        //
+        // message();
+        // Console.WriteLine("----------------------");
+        //
+        // message -= Print;
+        // message -= hello;
+        //
+        // message?.Invoke();
+        //
+        // void Print() => Console.WriteLine("Welcome to C#!");
+
+        
+        
+        // Lambda-Expression as argument for method
+        
+        // int[] integers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        //
+        // int result1 = Sum(integers, x => x > 5);
+        // Console.WriteLine(result1);
+        //
+        // int result2 = Sum(integers, x => x % 2 == 0);
+        // Console.WriteLine(result2);
+        //
+        // int Sum(int[] numbers, IsEqual func)
+        // {
+        //     int result = 0;
+        //     foreach (var i in numbers)
+        //     {
+        //         if (func(i)) 
+        //             result += i;
+        //     }
+        //     return result;
+        // }
+        
+        
+        
+        // Lambda-Expression as a result of method
+
         Operation operation = SelectOperation(OperationType.Add);
         Console.WriteLine(operation(10, 20));
         
