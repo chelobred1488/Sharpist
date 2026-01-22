@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
+using Delegates.Messages;
 
 namespace Delegates;
 
 class Program
 {
-    delegate void Message();
+    // delegate void Message();
     delegate int Operation(int x, int y);
     // delegate void DomeDel(int a, double b);
     // delegate T Operation<T, K>(K val);
@@ -136,7 +137,7 @@ class Program
         // void HowOldAreYou() => Console.WriteLine("How old are you?");
         
         
-        /* USAING DELEGATES */
+        /* USING DELEGATES */
 
         // Account account = new(100);
         // account.AccountRegister(Print);
@@ -154,7 +155,7 @@ class Program
         // }
         
         
-        /* ANNONYMOUS METHODS */
+        /* ANONYMOUS METHODS */
 
         // MessageHandler handler = delegate(string mes)
         // {
@@ -348,18 +349,26 @@ class Program
         
         
         // Event data transfer | IMPORTANT MOMENT!!!
-        Account account = new(100);
-        account.Notify += DisplayMessage;
-        account.Put(20);
-        account.Put(70);
-        account.Put(150);
+        // Account account = new(100);
+        // account.Notify += DisplayMessage;
+        // // account.Notify += DisplayColorMessage;
+        // account.Put(20);
+        // account.Put(70);
+        // account.Put(150);
+        //
+        // void DisplayMessage(Account sender, AccountEventArgs e)
+        // {
+        //     Console.WriteLine($"Сумма транзакции: {e.Sum}");
+        //     Console.WriteLine(e.Message);
+        //     Console.WriteLine($"Текущая сумма на счете: {sender.Sum}");
+        // }
 
-        void DisplayMessage(Account sender, AccountEventArgs e)
-        {
-            Console.WriteLine($"Сумма транзакции: {e.Sum}");
-            Console.WriteLine(e.Message);
-            Console.WriteLine($"Текущая сумма на счете: {sender.Sum}");
-        }
+        // void DisplayColorMessage(Account sender, AccountEventArgs e)
+        // {
+        //     Console.ForegroundColor = ConsoleColor.Red;
+        //     Console.WriteLine($"TEST!");
+        //     Console.ResetColor();
+        // }
         // void DisplayRedMessage(string message)
         // {
         //     Console.ForegroundColor = ConsoleColor.Red;
@@ -367,11 +376,26 @@ class Program
         //     Console.ResetColor();
         // }
         
+        
+        
+        // Covariance
+        MessageBuilder messageBuilder = WriteEmailMessage; // ковариантность
+        Message message = messageBuilder("Hello");
+        message.Print();    // Email: Hello
+        EmailMessage WriteEmailMessage(string text) => new EmailMessage(text);
+
+        Console.WriteLine("\n---------------- \n");
+
+        EmailReciever emailBox = RecieveMessage;  // контравариантность
+        emailBox(new EmailMessage("Welcome"));
+        void RecieveMessage(EmailMessage message) => message.Print();
     }
 }
 // DELEGATES
 delegate void MessageHandler(string message);
-delegate void Message();
+// delegate void Message();
 delegate void MathOperation(int x, int y);
 delegate void PrintHandler(string message);
 delegate bool IsEqual(int x);
+delegate Message MessageBuilder(string message);
+delegate void EmailReciever(EmailMessage message);
