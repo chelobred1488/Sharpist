@@ -379,7 +379,7 @@ class Program
         
         
         // Covariance
-        MessageBuilder messageBuilder = WriteEmailMessage; // ковариантность
+        MessageBuilder messageBuilder = WriteSmsMessage; // ковариантность
         Message message = messageBuilder("Hello");
         message.Print();    // Email: Hello
         EmailMessage WriteEmailMessage(string text) => new EmailMessage(text);
