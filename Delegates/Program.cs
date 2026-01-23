@@ -382,7 +382,7 @@ class Program
         MessageBuilder messageBuilder = WriteSmsMessage; // ковариантность
         Message message = messageBuilder("Hello");
         message.Print();    // Email: Hello
-        EmailMessage WriteEmailMessage(string text) => new EmailMessage(text);
+        SmsMessage WriteSmsMessage(string message) => new SmsMessage(message);
 
         Console.WriteLine("\n---------------- \n");
 
