@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionRS", "ExceptionRS\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{E79763F9-BA60-4E2A-8586-09CECBB18D79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{F7155D75-654A-4D7B-ACF0-880B23728CBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{E79763F9-BA60-4E2A-8586-09CECBB18D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79763F9-BA60-4E2A-8586-09CECBB18D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79763F9-BA60-4E2A-8586-09CECBB18D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

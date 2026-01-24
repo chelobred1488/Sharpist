@@ -490,13 +490,19 @@ class Program
         // }
         
         // Refuse the code via Lambda
-        var multiply = (int n) => (int m) => m * n;
-        var fn = multiply(5);
-        Console.WriteLine(fn(5));
-        Console.WriteLine(fn(6));
-        Console.WriteLine(fn(7));
+        // var multiply = (int n) => (int m) => m * n;
+        // var fn = multiply(5);
+        // Console.WriteLine(fn(5));
+        // Console.WriteLine(fn(6));
+        // Console.WriteLine(fn(7));
     }
 }
+
+// That's all
+// Delegates is more difficult than other themes,
+// so I need to repeat all these examples
+// and use for my real projects.
+
 // DELEGATES
 delegate void MessageHandler(string message);
 // delegate void Message();
