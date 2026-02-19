@@ -84,12 +84,12 @@ interface IMessage
     string Text { get; set; }
 }
 
-interface IPrintble
+interface IPrintable
 {
     void Print();
 }
 
-class Message : IMessage, IPrintble
+class Message : IMessage, IPrintable
 {
     public string Text { get; set; }
     public Message(string text) => Text = text;
@@ -97,19 +97,19 @@ class Message : IMessage, IPrintble
 }
 
 // #1
-interface IAction
-{
-    void Move();
-}
-class BaseAction : IAction
-{
-    public void Move() => Console.WriteLine("Move in BaseAction");
-}
+// interface IAction
+// {
+//     void Move();
+// }
+// class BaseAction : IAction
+// {
+//     public void Move() => Console.WriteLine("Move in BaseAction");
+// }
 
-class HeroAction : BaseAction, IAction
-{
-    void IAction.Move() => Console.WriteLine("Move in HeroAction");
-}
+// class HeroAction : BaseAction, IAction
+// {
+//     void IAction.Move() => Console.WriteLine("Move in HeroAction");
+// }
 
 // #2
 // class Person : ISchool, IUniversity
@@ -129,30 +129,87 @@ class HeroAction : BaseAction, IAction
 
 
 // #3
+// interface IMovable
+// {
+//     protected internal void Move();
+//     protected internal string Name { get;}
+//     protected internal event MoveHandler MoveEvent;
+// }
+// class Person : IMovable
+// {
+//     string name;
+//     // явная реализация события - дополнительно создается переменная
+//     MoveHandler? moveEvent;
+//     // неявная реализация события с модификатором public
+//     public event MoveHandler MoveEvent
+//     {
+//         add => moveEvent += value;
+//         remove => moveEvent -= value;
+//     }
+//     // неявная реализация свойства - в виде автосвойства, но с модификатором public
+//     public string Name { get => name; }
+//     public Person(string name) => this.name = name;
+//     // неявная реализация метода, но с модификатором public 
+//     public void Move()
+//     {
+//         Console.WriteLine($"{name} is walking");
+//         moveEvent?.Invoke();
+//     }
+// }
+
+// Implementation of interfaces in base and derived classes
 interface IMovable
 {
-    protected internal void Move();
-    protected internal string Name { get;}
-    protected internal event MoveHandler MoveEvent;
+    void Move();
 }
-class Person : IMovable
+
+abstract class Person : IMovable
 {
-    string name;
-    // явная реализация события - дополнительно создается переменная
-    MoveHandler? moveEvent;
-    // неявная реализация события с модификатором public
-    public event MoveHandler MoveEvent
+    public abstract void Move();
+}
+
+class Driver : Person
+{
+    public override void Move() => Console.WriteLine("The driver is driving a car!");
+}
+
+interface IAction
+{
+    void Move();
+}
+
+class BaseClass : IAction
+{
+    public void Move() => Console.WriteLine("Move in BaseClass!");
+}
+class HeroClass : BaseClass, IAction { }
+
+// -- -- -- -- -- -- -- --
+class BaseAction : IAction
+{
+    public void Move() => Console.WriteLine("Move in BaseAction!");
+}
+
+class HeroAction : BaseAction, IAction
+{
+    public new void Move() => Console.WriteLine("Move in HeroAction!");
+}
+
+// Print Messages with Generics
+class Messenger<T> where T : IMessage, IPrintable
+{
+    public void Send(T message)
     {
-        add => moveEvent += value;
-        remove => moveEvent -= value;
+        Console.WriteLine("Sending message!");
+        message.Print();
     }
-    // неявная реализация свойства - в виде автосвойства, но с модификатором public
-    public string Name { get => name; }
-    public Person(string name) => this.name = name;
-    // неявная реализация метода, но с модификатором public 
-    public void Move()
-    {
-        Console.WriteLine($"{name} is walking");
-        moveEvent?.Invoke();
-    }
+}
+
+interface IPrintableMessage : IPrintable, IMessage { }
+
+class PrintableMessage : IPrintableMessage
+{
+    public string Text { get; set; }
+    public PrintableMessage(string text) => Text = text;
+    public void Print() => Console.WriteLine(Text);
 }
