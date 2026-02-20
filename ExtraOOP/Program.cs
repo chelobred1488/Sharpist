@@ -4,55 +4,71 @@ class Program
 {
     static void Main(string[] args)
     {
-        Counter counter1 = new Counter() { Value = 23 };
-        Counter counter2 = new Counter() { Value = 45 };
+        // Counter counter1 = new Counter() { Value = 23 };
+        // Counter counter2 = new Counter() { Value = 45 };
+        //
+        // bool result = counter1 > counter2;
+        // Console.WriteLine(result);
+        //
+        // Counter counter3 = counter1 + counter2;
+        // Console.WriteLine(counter3.Value);
+        //
+        // int summa = counter1 + 12;
+        // Console.WriteLine(summa);
+        //
+        // Counter counter4 = new Counter() { Value = 10 };
+        // Counter counter5 = counter4++;
+        //
+        // Console.WriteLine(counter4.Value);
+        // Console.WriteLine(counter5.Value);
+        //
+        // Counter counter6 = ++counter4;
+        // Console.WriteLine(counter4.Value);
+        // Console.WriteLine(counter6.Value);
+        //
+        // Counter counter7 = new Counter() { Value = 0 };
+        // if (counter7)
+        //     Console.WriteLine(true);
+        // else
+        //     Console.WriteLine(false);
+        //     
+        // Counter counter = new Counter() { Value = 2 };
+        // if (!counter)
+        //     Console.WriteLine(true);
+        // else
+        //     Console.WriteLine(false);
+        //
+        //
+        // // Exercises from theme 1
+        // // #1
+        // State state1 = new State() { Pupulation = 11.45M, Area = 141.60M };
+        // State state2 = new State() { Pupulation = 34.65M, Area = 502.60M };
+        // State state3 = state1 + state2;
+        // bool isGreater = state1 > state2;
+        // Console.WriteLine($"Population: {state3.Pupulation}; Area: {state3.Area}");
+        // Console.WriteLine(isGreater);
+        //
+        // // #2
+        // Bread bread = new Bread() { Weight = 80 };
+        // Butter butter = new Butter() { Weight = 20 };
+        // Sandwich sandwich = bread + butter;
+        // Console.WriteLine(sandwich.Weight);
         
-        bool result = counter1 > counter2;
-        Console.WriteLine(result);
+        Secondmeter secondMeter1 = new Secondmeter() { Seconds = 23 };
         
-        Counter counter3 = counter1 + counter2;
-        Console.WriteLine(counter3.Value);
+        int x = (int)secondMeter1;
+        Console.WriteLine(x);
 
-        int summa = counter1 + 12;
-        Console.WriteLine(summa);
+        Secondmeter secondmeter2 = x;
+        Console.WriteLine(secondmeter2.Seconds);
         
-        Counter counter4 = new Counter() { Value = 10 };
-        Counter counter5 = counter4++;
+        Secondmeter secondmeter = new Secondmeter() { Seconds = 115 };
+        Timer timer = secondmeter;
+        Console.WriteLine($"{timer.Hours}:{timer.Minutes}:{timer.Seconds}");
         
-        Console.WriteLine(counter4.Value);
-        Console.WriteLine(counter5.Value);
-        
-        Counter counter6 = ++counter4;
-        Console.WriteLine(counter4.Value);
-        Console.WriteLine(counter6.Value);
-        
-        Counter counter7 = new Counter() { Value = 0 };
-        if (counter7)
-            Console.WriteLine(true);
-        else
-            Console.WriteLine(false);
-            
-        Counter counter = new Counter() { Value = 2 };
-        if (!counter)
-            Console.WriteLine(true);
-        else
-            Console.WriteLine(false);
-        
-        
-        // Exercises from theme 1
-        // #1
-        State state1 = new State() { Pupulation = 11.45M, Area = 141.60M };
-        State state2 = new State() { Pupulation = 34.65M, Area = 502.60M };
-        State state3 = state1 + state2;
-        bool isGreater = state1 > state2;
-        Console.WriteLine($"Population: {state3.Pupulation}; Area: {state3.Area}");
-        Console.WriteLine(isGreater);
-        
-        // #2
-        Bread bread = new Bread() { Weight = 80 };
-        Butter butter = new Butter() { Weight = 20 };
-        Sandwich sandwich = bread + butter;
-        Console.WriteLine(sandwich.Weight);
+        Secondmeter secondmeter3 = (Secondmeter)timer;
+        Console.WriteLine(secondmeter3.Seconds);
+
     }
 }
 public class Counter
@@ -134,4 +150,40 @@ public class Butter
 public class Sandwich
 {
     public int Weight { get; set; }
+}
+
+public class Secondmeter
+{
+    public int Seconds { get; set; }
+
+    public static implicit operator Secondmeter(int x)
+    {
+        return new Secondmeter() { Seconds = x };
+    }
+
+    public static explicit operator int(Secondmeter secondmeter)
+    {
+        return secondmeter.Seconds;
+    }
+    public static explicit operator Secondmeter(Timer timer)
+    {
+        int h = timer.Hours * 3600;
+        int m = timer.Minutes * 60;
+        return new Secondmeter { Seconds = h + m + timer.Seconds };
+    }
+
+    public static implicit operator Timer(Secondmeter secondmeter)
+    {
+        int h = secondmeter.Seconds / 3600;
+        int m = (secondmeter.Seconds % 3600) / 60;
+        int s = secondmeter.Seconds % 60;
+        return new Timer { Hours = h, Minutes = m, Seconds = s };
+    }
+}
+
+public class Timer
+{
+    public int Hours { get; set; }
+    public int Minutes { get; set; }
+    public int Seconds { get; set; }
 }
