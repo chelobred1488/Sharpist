@@ -68,6 +68,36 @@ class Program
         
         Secondmeter secondmeter3 = (Secondmeter)timer;
         Console.WriteLine(secondmeter3.Seconds);
+        
+        // Exercises from theme 1
+        // #1
+        Clock clock = new Clock() { Hours = 15};
+        
+        int y = (int)clock;
+        Console.WriteLine(y);
+        
+        Clock clock2 = 13;
+        Console.WriteLine(clock2.Hours);
+        clock2 = 34;
+        Console.WriteLine(clock2.Hours);
+        
+        // #2
+        Celcius celcius = new Celcius() { Gradus = 25 };
+        Fahrenheit fahrenheit = celcius;
+        Console.WriteLine(fahrenheit.Gradus);
+        
+        celcius = fahrenheit;
+        Console.WriteLine(celcius.Gradus);
+        
+        // #3
+        Dollar dollar = new Dollar() { Sum = 125 };
+        Euro euro = dollar;
+        Console.WriteLine(euro.Sum);
+        
+        dollar = (Dollar)euro;
+        Console.WriteLine(dollar.Sum);
+        Console.WriteLine(dollar.Sum);
+
 
     }
 }
@@ -186,4 +216,52 @@ public class Timer
     public int Hours { get; set; }
     public int Minutes { get; set; }
     public int Seconds { get; set; }
+}
+
+class Clock
+{
+    public int Hours { get; set; }
+    public static implicit operator Clock(int x)
+    {
+        return new Clock { Hours = x % 24 };
+    }
+    public static explicit operator int(Clock clock)
+    {
+        return clock.Hours;
+    }
+}
+
+class Celcius
+{
+    public double Gradus { get; set; }
+
+    public static implicit operator Fahrenheit(Celcius c)
+    {
+        return new Fahrenheit() { Gradus = (9.0 / 5) * (c.Gradus + 32) };
+    }
+    public static implicit operator Celcius(Fahrenheit f)
+    {
+        return new Celcius() { Gradus = (5.0 / 9) * (f.Gradus - 32) };
+    }
+}
+class Fahrenheit
+{
+    public double Gradus { get; set; }
+}
+
+class Dollar
+{
+    public decimal Sum { get; set; }
+}
+class Euro
+{
+    public decimal Sum { get; set; }
+    public static explicit operator Dollar(Euro euro)
+    {
+        return new Dollar { Sum = euro.Sum * 1.14M };
+    }
+    public static implicit operator Euro(Dollar dollars)
+    {
+        return new Euro { Sum = dollars.Sum / 1.14M };
+    }
 }
