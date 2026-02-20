@@ -1,0 +1,15 @@
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.AssemblyInfoInputs.cache
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.AssemblyInfo.cs
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.csproj.CoreCompileInputs.cache
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.sourcelink.json
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\bin\Debug\net9.0\ExtraOOP.exe
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\bin\Debug\net9.0\ExtraOOP.deps.json
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\bin\Debug\net9.0\ExtraOOP.runtimeconfig.json
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\bin\Debug\net9.0\ExtraOOP.dll
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\bin\Debug\net9.0\ExtraOOP.pdb
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.dll
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\refint\ExtraOOP.dll
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.pdb
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ExtraOOP.genruntimeconfig.cache
+C:\Users\HOME\RiderProjects\Sharpist\ExtraOOP\obj\Debug\net9.0\ref\ExtraOOP.dll

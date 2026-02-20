@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Dele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{F7155D75-654A-4D7B-ACF0-880B23728CBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraOOP", "ExtraOOP\ExtraOOP.csproj", "{11ADE6CE-9984-469D-9EC5-4B4206B83DA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7155D75-654A-4D7B-ACF0-880B23728CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11ADE6CE-9984-469D-9EC5-4B4206B83DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11ADE6CE-9984-469D-9EC5-4B4206B83DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11ADE6CE-9984-469D-9EC5-4B4206B83DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11ADE6CE-9984-469D-9EC5-4B4206B83DA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

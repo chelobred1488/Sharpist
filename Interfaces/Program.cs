@@ -163,6 +163,5 @@ class Program
         IMessenger<Messages> messenger = emailClient;
         Messages emailMessage = messenger.WriteMessage("Hi!");
         Console.WriteLine(emailMessage.Text);
-
     }
 }
