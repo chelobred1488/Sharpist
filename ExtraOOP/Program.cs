@@ -37,6 +37,22 @@ class Program
             Console.WriteLine(true);
         else
             Console.WriteLine(false);
+        
+        
+        // Exercises from theme 1
+        // #1
+        State state1 = new State() { Pupulation = 11.45M, Area = 141.60M };
+        State state2 = new State() { Pupulation = 34.65M, Area = 502.60M };
+        State state3 = state1 + state2;
+        bool isGreater = state1 > state2;
+        Console.WriteLine($"Population: {state3.Pupulation}; Area: {state3.Area}");
+        Console.WriteLine(isGreater);
+        
+        // #2
+        Bread bread = new Bread() { Weight = 80 };
+        Butter butter = new Butter() { Weight = 20 };
+        Sandwich sandwich = bread + butter;
+        Console.WriteLine(sandwich.Weight);
     }
 }
 public class Counter
@@ -81,4 +97,41 @@ public class Counter
     {
         return counter1.Value == 0;
     }
+}
+
+public class State
+{
+    public decimal Pupulation { get; set; }
+    public decimal Area  { get; set; }
+
+    public static State operator +(State state1, State state2)
+    {
+        return new State() { Pupulation = state1.Pupulation + state2.Pupulation, Area = state1.Area + state2.Area };
+    }
+    public static bool operator >(State state1, State state2)
+    {
+        return state1.Pupulation > state2.Pupulation;
+    }
+
+    public static bool operator <(State state1, State state2)
+    {
+        return state1.Pupulation < state2.Pupulation;
+    }
+}
+
+public class Bread
+{
+    public int Weight { get; set; }
+    public static Sandwich operator +(Bread bread, Butter butter)
+    {
+        return new Sandwich() { Weight = bread.Weight + butter.Weight };
+    }
+}
+public class Butter
+{
+    public int Weight { get; set; }
+}
+public class Sandwich
+{
+    public int Weight { get; set; }
 }
